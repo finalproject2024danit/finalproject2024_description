@@ -1,18 +1,25 @@
-import styles from "./page.module.css";
+import styles from "./home.module.scss";
 import Link from "next/link";
 
 export default function Home() {
     return (
         <div className={styles.page}>
-            <main className={styles.main}>
-                <p>This is the home page. Navigate to the other pages:</p>
-                <nav>
-                    <Link href="/users">Users</Link>
-                    <Link href="/messages">Messages</Link>
-                    <Link href="/workplace">Workplace</Link>
+            <main className={styles.page__main}>
+                <p className={styles.page__text}>
+                    Welcome to the home page! Navigate to entities:
+                </p>
+                <nav className={styles.page__nav}>
+                    <Link href="/users" className={styles.page__link}>
+                        Users
+                    </Link>
+                    <Link href="/messages" className={styles.page__link}>
+                        Messages
+                    </Link>
+                    <Link href="/workplace" className={styles.page__link}>
+                        Workplace
+                    </Link>
                 </nav>
             </main>
-
         </div>
     );
 }
