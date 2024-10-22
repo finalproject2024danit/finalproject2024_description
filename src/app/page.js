@@ -18,6 +18,9 @@ export default function Home() {
                     <Link href="/workplace" className={styles.page__link}>
                         Workplace
                     </Link>
+                    <Link href="/friends" className={styles.page__link}>
+                        Friends
+                    </Link>
                 </nav>
             </main>
         </div>
