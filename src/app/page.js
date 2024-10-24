@@ -15,12 +15,22 @@ export default function Home() {
                     <Link href="/messages" className={styles.page__link}>
                         Messages
                     </Link>
-                    <Link href="/workplace" className={styles.page__link}>
+                    <Link href="/workplaces" className={styles.page__link}>
                         Workplace
                     </Link>
                     <Link href="/friends" className={styles.page__link}>
                         Friends
                     </Link>
+                    <Link href="/comments" className={styles.page__link}>
+                        Comments
+                    </Link>
+                    <Link href="/likes" className={styles.page__link}>
+                        Likes
+                    </Link>
+                    <Link href="/posts" className={styles.page__link}>
+                        Posts
+                    </Link>
+                    
                 </nav>
             </main>
         </div>

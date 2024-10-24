@@ -1,8 +1,8 @@
 'use client';
 import Link from 'next/link';
-import styles from './workplacePage.module.scss';
+import styles from './workplacesPage.module.scss';
 
-const WorkplacePage = () => {
+const WorkplacesPage = () => {
     return (
         <div className={styles.page}>
             <h1 className={styles.page__title}>Workplace API Documentation</h1>
@@ -41,4 +41,4 @@ const WorkplacePage = () => {
     );
 };
 
-export default WorkplacePage;
+export default WorkplacesPage;
