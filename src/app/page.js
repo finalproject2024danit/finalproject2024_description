@@ -30,6 +30,9 @@ export default function Home() {
                     <Link href="/posts" className={styles.page__link}>
                         Posts
                     </Link>
+                    <Link href="/groups" className={styles.page__link}>
+                        Groups
+                    </Link>
                     
                 </nav>
             </main>
