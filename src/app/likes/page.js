@@ -28,6 +28,67 @@ const LikesPage = () => {
 }`}
                     </pre>
                 </div>
+
+                <p className={styles.page__text}><strong>Like a Post:</strong> Use the
+                    endpoint <code>/api/v1/likes/liked</code> to like a specific post.</p>
+                <p className={styles.page__text}><strong>Request Structure:</strong></p>
+                <div className={styles.page__object}>
+                    <pre className={styles.page__code}>
+                        {`{
+    "postId": number,
+    "userId": number
+}`}
+                    </pre>
+                </div>
+                <p className={styles.page__text}><strong>Response Structure:</strong> Returns the like object:</p>
+                <div className={styles.page__object}>
+                    <pre className={styles.page__code}>
+                        {`{
+    "id": number,
+    "post": {
+        "id": number,
+        "userId": number,
+        "content": "Post Content",
+        "createdDate": "2024-01-01T00:00:00Z",
+        "lastModifiedDate": "2024-01-01T00:00:00Z"
+    },
+    "userId": number,
+    "createdDate": "2024-01-01T00:00:00Z",
+    "lastModifiedDate": "2024-01-01T00:00:00Z"
+}`}
+                    </pre>
+                </div>
+
+                <p className={styles.page__text}><strong>Like a Comment:</strong> Use the
+                    endpoint <code>/api/v1/comment/like</code> to like a specific comment.</p>
+                <p className={styles.page__text}><strong>Request Structure:</strong></p>
+                <div className={styles.page__object}>
+                    <pre className={styles.page__code}>
+                        {`{
+    "commentId": number,
+    "userId": number
+}`}
+                    </pre>
+                </div>
+                <p className={styles.page__text}><strong>Response Structure:</strong> Returns the like object:</p>
+                <div className={styles.page__object}>
+                    <pre className={styles.page__code}>
+                        {`{
+    "id": number,
+    "comment": {
+        "id": number,
+        "postId": number,
+        "userId": number,
+        "content": "Comment Content",
+        "createdDate": "2024-01-01T00:00:00Z",
+        "lastModifiedDate": "2024-01-01T00:00:00Z"
+    },
+    "userId": number,
+    "createdDate": "2024-01-01T00:00:00Z",
+    "lastModifiedDate": "2024-01-01T00:00:00Z"
+}`}
+                    </pre>
+                </div>
             </div>
 
             <Link href="/" className={styles.page__link}>Go back to Home</Link>
