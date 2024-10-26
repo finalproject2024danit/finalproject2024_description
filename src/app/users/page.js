@@ -2,7 +2,7 @@
 import Link from 'next/link';
 import styles from './usersPage.module.scss';
 
-const Page = () => {
+const UsersPage = () => {
     return (
         <div className={styles.page}>
             <h1 className={styles.page__title}>Users Page</h1>
@@ -71,4 +71,4 @@ const Page = () => {
     );
 };
 
-export default Page;
+export default UsersPage;
