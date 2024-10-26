@@ -28,6 +28,45 @@ const GroupsPage = () => {
                     </pre>
                 </div>
 
+                <h3 className={styles.page__method}>Get Group by Name</h3>
+                <p className={styles.page__text}><strong>Endpoint:</strong> <code>/api/v1/groups/name/{'<name>'}</code></p>
+                <p className={styles.page__text}>Retrieves a specific group by its name.</p>
+                <p className={styles.page__text}><strong>Response Structure:</strong></p>
+                <div className={styles.page__object}>
+                    <pre className={styles.page__code}>
+                        {`{
+    "id": number,
+    "name": "Group Name",
+    "isOpen": boolean,
+    "users": [/* Array of user objects */],
+    "posts": [/* Array of post objects */],
+    "createdDate": "2024-01-01T00:00:00Z",
+    "lastModifiedDate": "2024-01-01T00:00:00Z"
+}`}
+                    </pre>
+                </div>
+
+                <h3 className={styles.page__method}>Search Groups by Name</h3>
+                <p className={styles.page__text}><strong>Endpoint:</strong> <code>/api/v1/groups/search/{'<name>'}</code></p>
+                <p className={styles.page__text}>Searches for groups that contain the specified name (minimum 3 characters).</p>
+                <p className={styles.page__text}><strong>Response Structure:</strong></p>
+                <div className={styles.page__object}>
+                    <pre className={styles.page__code}>
+                        {`[
+    {
+        "id": number,
+        "name": "Group Name",
+        "isOpen": boolean,
+        "users": [/* Array of user objects */],
+        "posts": [/* Array of post objects */],
+        "createdDate": "2024-01-01T00:00:00Z",
+        "lastModifiedDate": "2024-01-01T00:00:00Z"
+    },
+    ...
+]`}
+                    </pre>
+                </div>
+
                 <h3 className={styles.page__method}>Create Group</h3>
                 <p className={styles.page__text}><strong>Endpoint:</strong> <code>/api/v1/groups</code></p>
                 <p className={styles.page__text}>Creates a new group with the provided details.</p>
