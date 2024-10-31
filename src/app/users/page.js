@@ -11,6 +11,9 @@ const UsersPage = () => {
                 <p className={styles.page__text}><strong>Get user by ID:</strong> <code>/api/v1/users/user/'id'</code>
                 </p>
 
+                <p className={styles.page__text}><strong>Get all information about the user by ID:</strong> <code>/api/v1/user_all_info/'id'</code>
+                </p>
+
                 <p className={styles.page__text}><strong>Get friends by User ID:</strong>
                     <code>/api/v1/users/'userId'/friends</code></p>
 

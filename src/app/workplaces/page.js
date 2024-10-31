@@ -8,7 +8,11 @@ const WorkplacesPage = () => {
             <h1 className={styles.page__title}>Workplace API Documentation</h1>
 
             <div className={styles.page__info}>
-                <p className={styles.page__text}><strong>Get Workplace by ID:</strong> Use the endpoint <code>/api/v1/workplace/{'<id>'}</code> to retrieve a specific workplace.</p>
+                <p className={styles.page__text}><strong>Get ALL Workplaces:</strong> Use the
+                    endpoint <code>/api/v1/workplace</code> to get all workplaces.</p>
+
+                <p className={styles.page__text}><strong>Get Workplace by ID:</strong> Use the
+                    endpoint <code>/api/v1/workplace/{'<id>'}</code> to retrieve a specific workplace.</p>
                 <p className={styles.page__text}><strong>Response Structure:</strong></p>
                 <div className={styles.page__object}>
                     <pre className={styles.page__code}>
@@ -21,7 +25,9 @@ const WorkplacesPage = () => {
                     </pre>
                 </div>
 
-                <p className={styles.page__text}><strong>Add Workplace:</strong> Use the endpoint <code>/api/v1/workplace/create</code> to add a new workplace with the following request body structure:</p>
+                <p className={styles.page__text}><strong>Add Workplace:</strong> Use the
+                    endpoint <code>/api/v1/workplace/create</code> to add a new workplace with the following request
+                    body structure:</p>
                 <div className={styles.page__object}>
                     <pre className={styles.page__code}>
                         {`{
