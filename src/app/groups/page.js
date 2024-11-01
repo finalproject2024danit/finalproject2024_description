@@ -23,6 +23,7 @@ const GroupsPage = () => {
     "name": "Group Name",
     "isOpen": boolean,
     "photo": string,
+    "posts": [],
     "createdDate": "2024-01-01T00:00:00Z",
     "lastModifiedDate": "2024-01-01T00:00:00Z"
 }`}
@@ -41,6 +42,7 @@ const GroupsPage = () => {
     "name": "Group Name",
     "isOpen": boolean,
     "photo": string,
+    "posts": [],
     "createdDate": "2024-01-01T00:00:00Z",
     "lastModifiedDate": "2024-01-01T00:00:00Z"
 }`}
@@ -61,6 +63,7 @@ const GroupsPage = () => {
         "name": "Group Name",
         "isOpen": boolean,
         "photo": string,
+         "posts": [],
         "createdDate": "2024-01-01T00:00:00Z",
         "lastModifiedDate": "2024-01-01T00:00:00Z"
     },
