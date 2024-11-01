@@ -9,6 +9,8 @@ const GroupsPage = () => {
 
             <div className={styles.page__info}>
                 <h2 className={styles.page__subtitle}>API Endpoints:</h2>
+                <h3 className={styles.page__text}>Get groups by filter:</h3>
+                <p className={styles.page__text}><strong>Endpoint:</strong> <code>/api/v1/groups/filter?startPage='startPage'&perPage='perPage'&sortBy='sortBy'&sortDirection='sortDirection'{'<id>'}</code></p>
 
                 <h3 className={styles.page__method}>Get Group by ID</h3>
                 <p className={styles.page__text}><strong>Endpoint:</strong> <code>/api/v1/groups/{'<id>'}</code></p>
@@ -20,8 +22,7 @@ const GroupsPage = () => {
     "id": number,
     "name": "Group Name",
     "isOpen": boolean,
-    "users": [/* Array of user objects */],
-    "posts": [/* Array of post objects */],
+    "photo": string,
     "createdDate": "2024-01-01T00:00:00Z",
     "lastModifiedDate": "2024-01-01T00:00:00Z"
 }`}
@@ -29,7 +30,8 @@ const GroupsPage = () => {
                 </div>
 
                 <h3 className={styles.page__method}>Get Group by Name</h3>
-                <p className={styles.page__text}><strong>Endpoint:</strong> <code>/api/v1/groups/name/{'<name>'}</code></p>
+                <p className={styles.page__text}><strong>Endpoint:</strong> <code>/api/v1/groups/name/{'<name>'}</code>
+                </p>
                 <p className={styles.page__text}>Retrieves a specific group by its name.</p>
                 <p className={styles.page__text}><strong>Response Structure:</strong></p>
                 <div className={styles.page__object}>
@@ -38,8 +40,7 @@ const GroupsPage = () => {
     "id": number,
     "name": "Group Name",
     "isOpen": boolean,
-    "users": [/* Array of user objects */],
-    "posts": [/* Array of post objects */],
+    "photo": string,
     "createdDate": "2024-01-01T00:00:00Z",
     "lastModifiedDate": "2024-01-01T00:00:00Z"
 }`}
@@ -47,8 +48,10 @@ const GroupsPage = () => {
                 </div>
 
                 <h3 className={styles.page__method}>Search Groups by Name</h3>
-                <p className={styles.page__text}><strong>Endpoint:</strong> <code>/api/v1/groups/search/{'<name>'}</code></p>
-                <p className={styles.page__text}>Searches for groups that contain the specified name (minimum 3 characters).</p>
+                <p className={styles.page__text}><strong>Endpoint:</strong>
+                    <code>/api/v1/groups/search/{'<name>'}</code></p>
+                <p className={styles.page__text}>Searches for groups that contain the specified name (minimum 3
+                    characters).</p>
                 <p className={styles.page__text}><strong>Response Structure:</strong></p>
                 <div className={styles.page__object}>
                     <pre className={styles.page__code}>
@@ -57,8 +60,7 @@ const GroupsPage = () => {
         "id": number,
         "name": "Group Name",
         "isOpen": boolean,
-        "users": [/* Array of user objects */],
-        "posts": [/* Array of post objects */],
+        "photo": string,
         "createdDate": "2024-01-01T00:00:00Z",
         "lastModifiedDate": "2024-01-01T00:00:00Z"
     },
