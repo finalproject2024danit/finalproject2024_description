@@ -10,7 +10,7 @@ const GroupsPage = () => {
             <div className={styles.page__info}>
                 <h2 className={styles.page__subtitle}>API Endpoints:</h2>
                 <h3 className={styles.page__text}>Get groups by filter:</h3>
-                <p className={styles.page__text}><strong>Endpoint:</strong> <code>/api/v1/groups/filter?startPage='startPage'&perPage='perPage'&sortBy='sortBy'&sortDirection='sortDirection'{'<id>'}</code></p>
+                <p className={styles.page__text}><strong>Endpoint:</strong> <code>/api/v1/groups/filter?startPage='startPage'&perPage='perPage'&sortBy='sortBy'&sortDirection='sortDirection'</code></p>
 
                 <h3 className={styles.page__method}>Get Group by ID</h3>
                 <p className={styles.page__text}><strong>Endpoint:</strong> <code>/api/v1/groups/{'<id>'}</code></p>
