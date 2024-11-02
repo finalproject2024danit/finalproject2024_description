@@ -36,6 +36,9 @@ export default function Home() {
                     <Link href="/news" className={styles.page__link}>
                         News
                     </Link>
+                    <Link href="/hobbies" className={styles.page__link}>
+                        Hobbies
+                    </Link>
                     
                 </nav>
             </main>
