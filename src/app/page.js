@@ -39,6 +39,12 @@ export default function Home() {
                     <Link href="/hobbies" className={styles.page__link}>
                         Hobbies
                     </Link>
+                    <Link href="/residences" className={styles.page__link}>
+                        Residences
+                    </Link>
+                    <Link href="/global_search" className={styles.page__link}>
+                        Global search
+                    </Link>
                     
                 </nav>
             </main>
