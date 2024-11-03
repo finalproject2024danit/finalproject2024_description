@@ -16,12 +16,12 @@ const WorkplacesPage = () => {
                 <p className={styles.page__text}><strong>Response Structure:</strong></p>
                 <div className={styles.page__object}>
                     <pre className={styles.page__code}>
-                        {{
-                            "id": number,
-                            "name": "Workplace Name",
-                            "createdDate": "2024-01-01T00:00:00Z",
-                            "lastModifiedDate": "2024-01-01T00:00:00Z"
-                        }}
+{`{
+    "id": number,
+    "name": "Workplace Name",
+    "createdDate": "2024-01-01T00:00:00Z",
+    "lastModifiedDate": "2024-01-01T00:00:00Z"
+}`}
                     </pre>
                 </div>
 
@@ -30,9 +30,9 @@ const WorkplacesPage = () => {
                     body structure:</p>
                 <div className={styles.page__object}>
                     <pre className={styles.page__code}>
-                        {{
-                            "name": "New Workplace Name"
-                        }}
+{`{
+    "name": "New Workplace Name"
+}`}
                     </pre>
                 </div>
 
@@ -44,30 +44,32 @@ const WorkplacesPage = () => {
                 <p className={styles.page__text}><strong>Update Workplace:</strong> Use the endpoint <code>/api/v1/workplace/update</code> with the following request body:</p>
                 <div className={styles.page__object}>
                     <pre className={styles.page__code}>
-                        {{
-                            "userId": number,
-                            "id": number,
-                            "name": "Updated Workplace Name"
-                        }}
+{`{
+    "userId": number, // Required, must not be null
+    "id": number,     // Required, must not be null
+    "name": "Updated Workplace Name" // Required, must not be blank
+}`}
                     </pre>
                 </div>
-                <p className={styles.page__text}><strong>Response Structure:</strong></p>
-                <div className={styles.page__object}>
-                    <pre className={styles.page__code}>
-                        {{
-                            "id": number,
-                            "name": "Updated Workplace Name",
-                            "createdDate": "2024-01-01T00:00:00Z",
-                            "lastModifiedDate": "2024-01-02T00:00:00Z"
-                        }}
-                    </pre>
-                </div>
+
                 <p className={styles.page__text}><strong>Validation Constraints for Updating a Workplace:</strong></p>
                 <ul className={styles.page__list}>
                     <li className={styles.page__item}><strong>userId:</strong> Must not be null.</li>
                     <li className={styles.page__item}><strong>id:</strong> Must not be null.</li>
                     <li className={styles.page__item}><strong>name:</strong> Must not be blank.</li>
                 </ul>
+
+                <p className={styles.page__text}><strong>Response Structure:</strong></p>
+                <div className={styles.page__object}>
+                    <pre className={styles.page__code}>
+{`{
+    "id": number,
+    "name": "Updated Workplace Name",
+    "createdDate": "2024-01-01T00:00:00Z",
+    "lastModifiedDate": "2024-01-02T00:00:00Z"
+}`}
+                    </pre>
+                </div>
             </div>
 
             <Link href="/" className={styles.page__link}>Go back to Home</Link>
