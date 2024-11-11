@@ -22,22 +22,33 @@ const FriendsPage = () => {
 
                 <p className={styles.page__text}><strong>Add a Friend:</strong> <code>/api/v1/friends/add?userFromId='userFromId'&userToId='userToId'</code></p>
 
-                <p className={styles.page__text}><strong>Delete a Friend by ID:</strong> <code>/api/v1/friends/delete/'id'</code></p>
+                <p className={styles.page__text}><strong>Delete a Friend:</strong> <code>/api/v1/friends/delete</code></p>
 
-                <p className={styles.page__text}><strong>Object structure when adding a Friend:</strong></p>
+                <p className={styles.page__text}><strong>Description:</strong></p>
+                <ul className={styles.page__list}>
+                    <li>This endpoint allows you to delete a friendship between two users by providing their user IDs.</li>
+                    <li><strong>Request Body:</strong></li>
+                    <ul>
+                        <li><strong>userId1:</strong> The ID of the first user in the friendship.</li>
+                        <li><strong>userId2:</strong> The ID of the second user in the friendship.</li>
+                    </ul>
+                    <li><strong>Response:</strong> A confirmation message stating that the friendship has been successfully deleted.</li>
+                </ul>
+
+                <p className={styles.page__text}><strong>Object structure when deleting a Friend:</strong></p>
                 <div className={styles.page__object}>
                     <pre className={styles.page__code}>
                         {`{
-    "userFromId": number,
-    "userToId": number
+    "userId1": number,
+    "userId2": number
 }`}
                     </pre>
                 </div>
 
                 <p className={styles.page__text}><strong>Validation Constraints:</strong></p>
                 <ul className={styles.page__list}>
-                    <li className={styles.page__item}><strong>userFromId:</strong> Must be a valid user ID (number).</li>
-                    <li className={styles.page__item}><strong>userToId:</strong> Must be a valid user ID (number).</li>
+                    <li className={styles.page__item}><strong>userId1:</strong> Must be a valid user ID (number).</li>
+                    <li className={styles.page__item}><strong>userId2:</strong> Must be a valid user ID (number).</li>
                 </ul>
             </div>
 
