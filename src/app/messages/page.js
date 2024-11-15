@@ -8,7 +8,8 @@ const MessagesPage = () => {
             <h1 className={styles.page__title}>Messages Page</h1>
 
             <div className={styles.page__info}>
-                <p className={styles.page__text}><strong>Send a Message:</strong> Use WebSocket endpoint <code>/chat</code> with the following object structure:</p>
+                <p className={styles.page__text}><strong>Send a Message:</strong> Use WebSocket
+                    endpoint <code>/chat</code> with the following object structure:</p>
                 <div className={styles.page__object}>
                     <pre className={styles.page__code}>
                         {`{
@@ -19,18 +20,41 @@ const MessagesPage = () => {
                     </pre>
                 </div>
 
-                <p className={styles.page__text}><strong>Get Messages Between Two Users:</strong> <code>/api/v1/messages/between/'userFromId'/'userToId'</code></p>
+                <p className={styles.page__text}><strong>Get Messages Between Two Users:</strong>
+                    <code>/api/v1/messages/between/'userFromId'/'userToId'</code></p>
 
-                <p className={styles.page__text}><strong>Get a Message by ID:</strong> <code>/api/v1/messages/'id'</code></p>
+                <p className={styles.page__text}><strong>Get a Message by ID:</strong>
+                    <code>/api/v1/messages/'id'</code></p>
 
-                <p className={styles.page__text}><strong>Object structure for sending a message:</strong></p>
+                <p className={styles.page__text}><strong>Get All Conversations for a User:</strong></p>
+                <p className={styles.page__text}>Use the
+                    endpoint <code>/api/v1/messages/conversations/{userId}</code> to get all conversations for a
+                    specific user. This will return a list of conversations, where each conversation consists of
+                    messages between two users.</p>
                 <div className={styles.page__object}>
                     <pre className={styles.page__code}>
-                        {`{
-    "content": "Message content",
-    "userFrom": number,
-    "userTo": number
-}`}
+                        {`GET /api/v1/messages/conversations/{userId}`}
+                    </pre>
+                </div>
+
+                <p className={styles.page__text}><strong>Object structure for response:</strong></p>
+                <div className={styles.page__object}>
+                    <pre className={styles.page__code}>
+                        {`[
+    {
+        "user1Id": number,
+        "user2Id": number,
+        "messages": [
+            {
+                "content": "Message content",
+                "userFrom": number,
+                "userTo": number,
+                "messageTime": "timestamp"
+            },
+            ...
+        ]
+    }
+]`}
                     </pre>
                 </div>
 
