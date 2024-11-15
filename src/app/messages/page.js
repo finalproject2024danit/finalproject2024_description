@@ -28,7 +28,7 @@ const MessagesPage = () => {
 
                 <p className={styles.page__text}><strong>Get All Conversations for a User:</strong></p>
                 <p className={styles.page__text}>Use the
-                    endpoint <code>/api/v1/messages/conversations/{userId}</code> to get all conversations for a
+                    endpoint <code>/api/v1/messages/conversations/'userId'</code> to get all conversations for a
                     specific user. This will return a list of conversations, where each conversation consists of
                     messages between two users.</p>
                 <div className={styles.page__object}>
