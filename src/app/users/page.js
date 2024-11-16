@@ -27,6 +27,38 @@ const UsersPage = () => {
                     <code>/api/v1/user_all_info/'id'</code>
                 </p>
 
+                <p className={styles.page__text}><strong>Get user by access token:</strong> <code>/api/v1/auth/get_user</code></p>
+                <ul className={styles.page__list}>
+                    <li>This endpoint retrieves the full information about a user by decoding the access token provided in the `Authorization` header.</li>
+                    <li><strong>Request Method:</strong> POST</li>
+                    <li><strong>Headers:</strong>
+                        <ul>
+                            <li><code>Authorization</code>: Bearer <em>access_token</em></li>
+                        </ul>
+                    </li>
+                    <li><strong>Response:</strong> A <code>ResponseUserAllDataDto</code> object containing all user details.</li>
+                    <li>If the token is invalid or expired, an error response is returned.</li>
+                </ul>
+
+                <p className={styles.page__text}><strong>Response Object structure:</strong></p>
+                <div className={styles.page__object}>
+                    <pre className={styles.page__code}>
+                        {`{
+    "id": number,
+    "firstName": "",
+    "lastName": "",
+    "email": "",
+    "gender": "MALE | FEMALE | NOT_SPECIFIED",
+    "dateOfBirth": number,
+    "avatar": "",
+    "phones": ["+1234567890"],
+    "photoData": "",
+    "createdDate": "ISO date string",
+    "lastModifiedDate": "ISO date string"
+}`}
+                    </pre>
+                </div>
+
                 <p className={styles.page__text}><strong>Get friends by User ID:</strong>
                     <code>/api/v1/users/'userId'/friends</code></p>
 
