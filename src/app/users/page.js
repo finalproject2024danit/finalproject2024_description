@@ -23,20 +23,36 @@ const UsersPage = () => {
                     </pre>
                 </div>
 
+                <p className={styles.page__text}><strong>Refresh token:</strong> <code>/api/v1/auth/refresh</code>
+                </p>
+                <p className={styles.page__text}><strong>Object structure:</strong></p>
+                <div className={styles.page__object}>
+                    <pre className={styles.page__code}>
+                        {`{
+    "refresh token": ""
+}`}
+                    </pre>
+                </div>
+
                 <p className={styles.page__text}><strong>Get all information about the user by ID:</strong>
                     <code>/api/v1/user_all_info/'id'</code>
                 </p>
 
-                <p className={styles.page__text}><strong>Get user by access token:</strong> <code>/api/v1/auth/get_user</code></p>
+                <p className={styles.page__text}><strong>Get user by access token:</strong>
+                    <code>/api/v1/auth/get_user</code></p>
                 <ul className={styles.page__list}>
-                    <li>This endpoint retrieves the full information about a user by decoding the access token provided in the `Authorization` header.</li>
+                    <li>This endpoint retrieves the full information about a user by decoding the access token provided
+                        in the `Authorization` header.
+                    </li>
                     <li><strong>Request Method:</strong> POST</li>
                     <li><strong>Headers:</strong>
                         <ul>
                             <li><code>Authorization</code>: Bearer <em>access_token</em></li>
                         </ul>
                     </li>
-                    <li><strong>Response:</strong> A <code>ResponseUserAllDataDto</code> object containing all user details.</li>
+                    <li><strong>Response:</strong> A <code>ResponseUserAllDataDto</code> object containing all user
+                        details.
+                    </li>
                     <li>If the token is invalid or expired, an error response is returned.</li>
                 </ul>
 
