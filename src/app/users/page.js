@@ -101,7 +101,8 @@ const UsersPage = () => {
                     </pre>
                 </div>
 
-                <p className={styles.page__text}><strong>Patch user:</strong> <code>/api/v1/users/patch/'id'</code></p>
+                <p className={styles.page__text}><strong>Patch user general information:</strong>
+                    <code>/api/v1/users/patch/general_information/'id'</code></p>
 
                 <p className={styles.page__text}><strong>Object structure for PATCH:</strong></p>
                 <div className={styles.page__object}>
@@ -110,12 +111,49 @@ const UsersPage = () => {
     "firstName": "",
     "lastName": "",
     "email": "",
-    "password": "",
     "gender": "MALE | FEMALE | NOT_SPECIFIED",
     "dateOfBirth": number,
-    "avatar": "",
-    "phones": "+1234567890",
-    "photoData": ""
+    "phones": "+1234567890"
+}`}
+                    </pre>
+                </div>
+
+                <p className={styles.page__text}><strong>Patch user place of residence:</strong>
+                    <code>/api/v1/users/patch/place_of_residence/'id'</code></p>
+
+                <p className={styles.page__text}><strong>Object structure for PATCH:</strong></p>
+                <div className={styles.page__object}>
+                    <pre className={styles.page__code}>
+                        {`{
+    "planet": "",
+    "country": "",
+    "city": ""
+}`}
+                    </pre>
+                </div>
+
+                <p className={styles.page__text}><strong>Patch user hobbies:</strong>
+                    <code>/api/v1/users/patch/hobbies/'id'</code></p>
+
+                <p className={styles.page__text}><strong>Object structure for PATCH:</strong></p>
+                <div className={styles.page__object}>
+                    <pre className={styles.page__code}>
+                        {`{
+    "language": "",
+    "pet": "",
+    "interest": ""
+}`}
+                    </pre>
+                </div>
+
+                <p className={styles.page__text}><strong>Patch user workplace:</strong>
+                    <code>/api/v1/users/patch/workplaces/'id'</code></p>
+
+                <p className={styles.page__text}><strong>Object structure for PATCH:</strong></p>
+                <div className={styles.page__object}>
+                    <pre className={styles.page__code}>
+                        {`{
+    "name": ""
 }`}
                     </pre>
                 </div>
