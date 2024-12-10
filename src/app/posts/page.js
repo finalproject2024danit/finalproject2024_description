@@ -24,7 +24,7 @@ const PostsPage = () => {
                 </div>
 
                 <p className={styles.page__text}><strong>Get Posts by User ID:</strong> Use the
-                    endpoint <code>/api/v1/posts/user/{'<userId>'}</code> to retrieve all posts by a specific user.</p>
+                    endpoint <code>/api/v1/posts/user/{'<userId>'}?startPage='startPage'&perPage='perPage'&sortBy='sortBy'&sortDirection='sortDirection'</code> to retrieve all posts by a specific user.</p>
                 <p className={styles.page__text}><strong>Response Structure:</strong></p>
                 <div className={styles.page__object}>
                     <pre className={styles.page__code}>

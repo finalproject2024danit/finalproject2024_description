@@ -76,7 +76,7 @@ const UsersPage = () => {
                 </div>
 
                 <p className={styles.page__text}><strong>Get friends by User ID:</strong>
-                    <code>/api/v1/users/'userId'/friends</code></p>
+                    <code>/api/v1/users/'userId'/friends?startPage='startPage'&perPage='perPage'&sortBy='sortBy'&sortDirection='sortDirection'</code></p>
 
                 <p className={styles.page__text}><strong>Get users by filter:</strong>
                     <code>/api/v1/users/filter?startPage='startPage'&perPage='perPage'&sortBy='sortBy'&sortDirection='sortDirection'</code>
