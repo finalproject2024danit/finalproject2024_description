@@ -58,7 +58,10 @@ const CommentsPage = () => {
                     </pre>
                 </div>
                 <p className={styles.page__text}><strong>Method:</strong> <code>POST</code></p>
-                <p className={styles.page__text}><strong>Description:</strong> Creates a new comment for a specific post. The request body must include the <code>postId</code>, <code>userId</code>, and the <code>content</code> of the comment. The response will contain the full details of the created comment.</p>
+                <p className={styles.page__text}><strong>Description:</strong> Creates a new comment for a specific
+                    post. The request body must include the <code>postId</code>, <code>userId</code>, and
+                    the <code>content</code> of the comment. The response will contain the full details of the created
+                    comment.</p>
             </div>
 
             <div className={styles.page__info}>
@@ -73,7 +76,35 @@ const CommentsPage = () => {
 }`}
                     </pre>
                 </div>
-                <p className={styles.page__text}><strong>Description:</strong> Deletes the comment with the specified ID. If successful, the response will contain a confirmation message.</p>
+
+                <p className={styles.page__text}><strong>Get Comments by Post ID:</strong> Use the
+                    endpoint <code>/api/v1/comment/post/{'<postId>'}</code> to retrieve all comments for a specific post
+                    with pagination and sorting.</p>
+                <p className={styles.page__text}><strong>Query Parameters:</strong></p>
+                <ul>
+                    <li><code>startPage</code> (default: 0): Page number to retrieve.</li>
+                    <li><code>perPage</code> (default: 10): Number of comments per page.</li>
+                    <li><code>sortBy</code> (default: "id"): Field to sort by.</li>
+                    <li><code>sortDirection</code> (default: "asc"): Sorting direction ("asc" or "desc").</li>
+                </ul>
+                <p className={styles.page__text}><strong>Response Structure:</strong></p>
+                <div className={styles.page__object}>
+                    <pre className={styles.page__code}>
+                        {`[
+    {
+        "id": number,
+        "postId": number,
+        "userId": number,
+        "content": "Comment Content",
+        "createdDate": "2024-01-01T00:00:00Z",
+        "lastModifiedDate": "2024-01-01T00:00:00Z"
+    }
+]`}
+                    </pre>
+                </div>
+
+                <p className={styles.page__text}><strong>Description:</strong> Deletes the comment with the specified
+                    ID. If successful, the response will contain a confirmation message.</p>
             </div>
 
             <Link href="/" className={styles.page__link}>Go back to Home</Link>
